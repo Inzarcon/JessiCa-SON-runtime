@@ -1,1 +1,2 @@
-# JessiCa-SON-LGPL-sources
+# JessiCa: SON Windows runtime
+This is a companion repository for [*JessiCa: Serpents Obstruct None*](https://github.com/Inzarcon/JessiCa-SON) which hosts the preconfigured *Python* runtime for *Windows* included with the standalone releases of *JessiCa:SON*.
