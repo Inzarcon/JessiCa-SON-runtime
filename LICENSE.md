@@ -4,7 +4,7 @@ Copyright (c) 2024 Inzarcon
 **Some components or parts of them included with this project are released under different license terms and have their own license notices, listed further below.** Commonly shared or long license texts are found in the *License Texts* section of this document.  
 
 In the case of components licensed under the **LGPL** (most notably *Qt 6* and *libvips*), compliance also requires providing the corresponding source code. You are hereby given this written offer to receive said source code. Please create a corresponding issue at https://github.com/Inzarcon/JessiCa-SON/issues or direct your request to `inzarcon@eclipso.de`. \
-**Note:** The redistributed *libvips* files included with the *JessiCa:SON* standalone releases are identical to the ones from the official *libvips* *Windows* release version [vips-dev-w64-web-8.15.1.zip](https://github.com/libvips/build-win64-mxe/releases/download/v8.15.1/vips-dev-w64-web-8.15.1.zip). The included *Qt 6* binaries and *PySide6* package are identical to the ones provided by running `pip install PySide6==6.6.1` on 64-Bit *Windows 10* and *Python* version 3.11.7.
+**Note:** The redistributed *libvips* files included with the *JessiCa:SON* standalone releases are identical to the ones from the official *libvips* *Windows* release version [vips-dev-w64-web-8.15.1.zip](https://github.com/libvips/build-win64-mxe/releases/download/v8.15.1/vips-dev-w64-web-8.15.1.zip). The included *Qt 6* binaries and *PySide6* package are identical to the ones provided by running `pip install PySide6==6.6.1` on 64-Bit *Windows 10* and *Python* version 3.11.7. The same principle applies to the remaining *Python* packages licensed under the *LGPL*.
 
  **For the licenses of *libvips* and its subcomponents** (if included with this distribution), please refer to the `JessiCa-SON/libvips` folder which contains an unmodified copy of *libvips Windows* build version vips-dev-w64-web-8.15.1, including all of its license statements. For further information, see \
 https://github.com/libvips/libvips \
@@ -15,7 +15,9 @@ https://github.com/libvips/build-win64-mxe/releases/download/v8.15.1/vips-dev-w6
 
  For software available under multiple licensing options, only the respective license selected for this project is referenced in this document.
 
-The table below summarizes the high-level third-party components and their licenses. With the exception of `compose.py`, all table entries are only redistributed with the *JessiCa: Serpents Obstruct None* standalone releases. For embedded Python packages in  \
+ For the licenses of **Third-Party Resources** such as icons and sound files within the `resources/` directory (if included with this distribution), please refer to the `CREDITS.md` file(s) in the respective subdirectories. (Resource files without explicit credit statements are original work for *JessiCa: Serpents Obstruct None* and fall under its **MIT License**.)
+
+The table below summarizes the high-level third-party software components and their licenses. With the exception of `compose.py` and files in `src/thirdparty/`, all table entries are only redistributed with the *JessiCa: Serpents Obstruct None* standalone releases. For embedded Python packages in  \
 `python-3.11.7-embed-amd64/Lib/site-packages/[package_name]`,  \
  the licensing information is also found in the corresponding  \
  `python-3.11.7-embed-amd64/Lib/site-packages/[package_name]-[version].dist-info`  \
@@ -26,17 +28,20 @@ The table below summarizes the high-level third-party components and their licen
 | Component | Location in `JessiCa-SON/` | License | Notes |
 |---|---|---|---|
 | **compose.py** | `src/` | **CC BY-SA 3.0** | Modified
+| **playsound.py** | `src/thirdparty/` | **MIT** |
 | **Python (Windows)** | `python-3.11.7-embed-amd64/` | **PSF-2.0** |
-| **PythonEmbed4Win** | `python-3.11.7-embed-amd64` | **MIT** | Only output included
+| **PythonEmbed4Win** | `python-3.11.7-embed-amd64/` | **MIT** | Only output included
 | **libvips** | `libvips/` | **LGPL-2.1** | 
 | **CFFI** | `[...]/cffi/` | **MIT**
 | **Colorama** | `[...]/colorama/` | **BSD 3-clause**
 | **Darkdetect** | `[...]/darkdetect/` | **BSD 3-clause**
-| **pycparser** | `[...]/pycparser` | **BSD 3-clause**
-| **PySide6** | `[...]/PySide6` | **LGPL-3** | Includes Qt 6 DLL binaries, also LGPL-3
-| **pyvips** | `[...]/pyvips` | **MIT**
-| **PyQtDarkTheme** | `[...]/qdarktheme` | **MIT**
-| **Shiboken6** | `[...]/shiboken6` | **LGPL-3**
+| **pycparser** | `[...]/pycparser/` | **BSD 3-clause**
+| **pynput** | `[...]/pynput/` | **LGPL-3**
+| **PySide6** | `[...]/PySide6/` | **LGPL-3** | Includes Qt 6 DLL binaries, also LGPL-3
+| **pyvips** | `[...]/pyvips/` | **MIT**
+| **PyQtDarkTheme** | `[...]/qdarktheme/` | **MIT**
+| **Shiboken6** | `[...]/shiboken6/` | **LGPL-3**
+| **six** | `[...]/six.py` | **MIT**
 
 # Notice - General
 ## compose.py
@@ -45,6 +50,12 @@ The table below summarizes the high-level third-party components and their licen
 File https://github.com/CleverRaven/Cataclysm-DDA/blob/6ce851fd71bf0fa456f62f3bf234fae98391bcd9/tools/gfx_tools/compose.py \
 Licensed under the **CC BY-SA 3.0 License**. \
 Original work was modified for *JessiCa: Serpents Obstruct None*.
+
+## playsound.py
+https://github.com/TaylorSMarks/playsound \
+File https://github.com/TaylorSMarks/playsound/commit/9cf4af20caa5ae8586f88b65659681b24f0c4e69 \
+Copyright (c) 2021 Taylor Marks <taylor@marksfam.com> \
+Licensed under the **MIT License**.
 
 ## CFFI, version 1.16.0
 https://github.com/cffi/cffi \
@@ -69,6 +80,11 @@ Copyright (c) 2008-2020, Eli Bendersky \
 All rights reserved. \
 Licensed under the **BSD 3-clause License**.
 
+## pynput, version 1.7.7
+https://github.com/moses-palmer/pynput \
+Copyright (C) 2007-2024 Free Software Foundation, Inc. <http://fsf.org/> \
+Licensed under the **LGPL-3** license.
+
 ## PyQtDarktheme, version 2.1.0
 https://github.com/5yutan5/PyQtDarkTheme \
 Copyright (c) 2021-2022 Yunosuke Ohsugi \
@@ -87,6 +103,11 @@ Used to create and configure `python-3.11.7-embed-amd64` (if included with this 
 https://github.com/jtmoon79/PythonEmbed4Win \
 Copyright (c) 2022 James Thomas Moon \
 Licensed under the **MIT License**.
+
+## six, version 1.16.0
+https://github.com/benjaminp/six \
+Copyright (c) 2010-2020 Benjamin Peterson \
+Licensed under the **MIT License**
 
 # Notice - Qt and its Third-Party Modules
 ## Qt 6.6.1, PySide6, Shiboken6
